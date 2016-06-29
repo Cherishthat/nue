@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Measuring">
+        <item>外出</item>
+        <item>拒测</item>
+        <item>手术</item>
+        <item>其他</item>
+    </string-array>
+</resources>

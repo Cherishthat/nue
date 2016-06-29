@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+    <ScrollView
+        android:id="@+id/bodyLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomLayout"
+        android:padding="3.0dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                
+                <LinearLayout
+                    android:id="@+id/btadd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="3.0dip"
+                        android:text="绑定设备:"
+                        android:textSize="18.0dip"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/bluesetting_txtbtaddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无"
+                        android:padding="3.0dip"
+                        android:textSize="18.0dip"
+                        android:textStyle="bold" />
+                    
+                </LinearLayout>                
+                
+            </LinearLayout>
+
+            
+            
+            
+            
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="3.0dip"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:id="@+id/bluesetting_btnSetting"
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:layout_weight="1.0"
+            android:text="@string/Setting_SmartShell_Setting" />
+
+        <Button
+            android:id="@+id/bluesetting_btnOk"
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:layout_weight="1.0"
+            android:text="@string/Setting_SmartShell_OK" />
+
+        <Button
+            android:id="@+id/bluesetting_btnclose"
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:layout_weight="1.0"
+            android:text="@string/Setting_SmartShell_close" />
+    </LinearLayout>
+
+</RelativeLayout>

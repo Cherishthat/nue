@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    >
+    
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+      <TextView
+        android:id="@+id/applyrt_itmdesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:textColor="@color/black" 
+        android:textSize="16sp"
+        android:text="@string/excute_excute_arcimdesc"
+        />
+    
+    </LinearLayout>
+    
+    
+    <LinearLayout 
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:baselineAligned="false"
+      android:orientation="horizontal" >
+          <LinearLayout 
+		      android:layout_width="match_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_weight="1"
+		      android:orientation="vertical" >
+
+		       <TextView
+		           android:layout_width="match_parent"
+		           android:layout_height="wrap_content"
+		           android:layout_margin="1dp"
+		           android:text="@string/applyrt_prescno"
+		           android:textSize="12sp" />
+
+		       <TextView
+			        android:id="@+id/applyrt_prescno"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_margin="1dp"
+			        android:textColor="@color/black" 
+			        android:textSize="16sp"
+			        />
+		                 
+		   </LinearLayout>  
+		   <LinearLayout 
+		      android:layout_width="match_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_weight="1"
+		      android:orientation="vertical" >
+
+		      <TextView
+		          android:layout_width="match_parent"
+		          android:layout_height="wrap_content"
+		          android:layout_margin="1dp"
+		          android:text="@string/applyrt_ordqty"
+		          android:textSize="12sp" />
+
+		       <TextView
+			        android:id="@+id/applyrt_ordqty"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_margin="1dp"
+			        android:textColor="@color/black"
+			        android:textSize="16sp"
+			        />
+		                 
+		   </LinearLayout>    
+		   
+		   <LinearLayout 
+		      android:layout_width="match_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_weight="1"
+		      android:orientation="vertical" >
+
+		      <TextView
+		          android:layout_width="match_parent"
+		          android:layout_height="wrap_content"
+		          android:layout_margin="1dp"
+		          android:text="@string/applyrt_reqqty"
+		          android:textSize="12sp" />
+
+		       <EditText
+			        android:id="@+id/applyrt_reqqty"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_margin="1dp"
+			        android:inputType="phone"
+			        android:textColor="@color/red" 
+			        android:textSize="16sp"
+			        />
+		                 
+		   </LinearLayout>  
+      
+     </LinearLayout>
+    
+
+      <LinearLayout 
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:baselineAligned="false"
+      android:orientation="horizontal" >
+
+          <LinearLayout
+              android:layout_height="wrap_content"
+              android:layout_width="0dip"
+              android:layout_weight="1"
+              android:orientation="vertical" >
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="1dp"
+                  android:text="@string/applyrt_unit"
+                  android:textSize="12sp" />
+
+              <TextView
+                  android:id="@+id/applyrt_unit"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="1dp"
+                  android:textColor="@color/black"
+                  android:textSize="16sp" />
+          </LinearLayout>
+
+          <LinearLayout 
+		      android:layout_width="0dip"
+		      android:layout_height="wrap_content"
+		      android:layout_weight="1"
+		      android:orientation="vertical" >
+
+		       <TextView
+		           android:layout_width="match_parent"
+		           android:layout_height="wrap_content"
+		           android:layout_margin="1dp"
+		           android:text="@string/applyrt_status"
+		           android:textSize="12sp" />
+
+		       <TextView
+			        android:id="@+id/applyrt_status"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:textColor="@color/black" 
+			        android:layout_margin="1dp"
+			        android:textSize="16sp"
+			        />
+		                 
+		   </LinearLayout>
+		   <LinearLayout 
+		      android:layout_width="0dip"
+		      android:layout_height="wrap_content"
+		      android:layout_weight="1"
+		      android:orientation="vertical" >
+
+		       <TextView
+		           android:layout_width="match_parent"
+		           android:layout_height="wrap_content"
+		           android:layout_margin="1dp"
+		           android:text="@string/applyrt_ordStartDate"
+		           android:textSize="12sp" />
+
+		       <TextView
+			        android:id="@+id/applyrt_ordStartDate"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:textColor="@color/black" 
+			        android:layout_margin="1dp"
+			        android:textSize="16sp"
+			        />
+		                 
+		   </LinearLayout>
+           
+	</LinearLayout>
+<LinearLayout 
+		      android:layout_width="match_parent"
+		      android:layout_height="wrap_content"
+		      android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/applyrt_reson" />
+
+    <EditText
+        android:id="@+id/applyrt_reason"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:textColor="@color/red" 
+        android:layout_weight="1"
+        android:ems="10" >
+
+      
+    </EditText>
+    
+		  </LinearLayout> 
+</LinearLayout>
+
+
+
+
+
+
+

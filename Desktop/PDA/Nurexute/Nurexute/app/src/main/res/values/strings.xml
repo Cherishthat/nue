@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">护士执行</string>
+    <string name="action_settings">设置</string>
+    <string name="bed_title">病人列表</string>
+    <string name="pull_to_refresh_pull_label">下拉刷新</string>
+    <string name="pull_to_refresh_release_label">松开后可以刷新</string>
+    <string name="pull_to_refresh_refreshing_label"> 加载中...</string>
+    <string name="pull_to_refresh_tap_serche">搜索</string>
+    <string name="bed_btn_patinet">基本信息</string>
+    <string name="bed_btn_excute">医嘱执行</string>
+    <string name="bed_btn_worter">临床输液</string>
+    <string name="bed_btn_Signs">生命体征</string>
+    <string name="login_dialog_account">账户:</string>
+    <string name="login_dialog_account_hint">工号</string>
+    <string name="login_dialog_password">密码:</string>
+    <string name="login_dialog_password_hint">输入密码</string>
+    <string name="login_dialog_login">登   录</string>
+    <string name="msg_login_uid_null">账户不能为空</string>
+    <string name="msg_login_pwd_null">密码不能为空</string>
+    <string name="depart_select_ok">进   入</string>
+    <string name="menu_btn_patintlist">病人列表</string>
+    <string name="menu_btn_vitalsigns">生命体征</string>
+    <string name="menu_btn_linchuangshuye">临床输液</string>
+    <string name="menu_btn_hushizhix">护士执行</string>
+    <string name="menu_btn_caijibiaoben">采集标本</string>
+    <string name="patient_info_head_title">基本信息</string>
+    <string name="menu_right_bar_labno">采集标本</string>
+    <string name="menu_right_bar_pha">口服发药</string>
+    <string name="menu_right_bar_whxr">雾化吸入</string>
+    <string name="menu_right_bar_report">报告</string>
+    <string name="menu_right_bar_applyrt">退药申请</string>
+    
+    <string name="github">github</string>
+    <string name="about">关于</string>
+    <string name="licenses">许可</string>
+    <string name="contact">联系</string>
+    <string name="github_label">asdf</string>
+    <string name="todo">待办事宜</string>
+    <string name="menu_right_bar_patinetInfo">基本信息</string>
+    <string name="menu_right_bar_excute">医嘱执行</string>
+     <string name="menu_right_bar_ordertoday">当日医嘱查询</string>
+    <string name="menu_right_bar_worter">临床输液</string>
+    <string name="menu_right_bar_Signs">生命体征</string>
+    <string name="menu_right_bar_Setting">设置</string>
+    <string name="menu_right_bar_about">关于</string>
+    <string name="menu_right_bar_exam">检查结果</string>
+    <string name="menu_right_bar_order">医嘱录入</string>
+    <string name="menu_right_bar_depselect">科室选择</string>
+    <string name="menu_right_bar_event">事件</string>
+    
+    <string name="blank"></string>
+    <string name="querytoday_head_bedno">床号</string>
+    <string name="querytoday_orderstatus">状态</string>
+    
+    <string name="excute_main_head_SerNo">序号</string>
+    <string name="excute_main_head_OrderName">医嘱名称</string>
+    <string name="excute_main_head_OrderBefore">优先级</string>
+    <string name="excute_main_head_Uom">总量</string>
+    <string name="excute_main_head_OrderDate">开单日期</string>
+    <string name="excute_main_head_OrderExeDate">待执行日期</string>
+    
+    <string name="excute_searche_bgdate">开始</string>
+    <string name="excute_searche_eddate">结束</string>
+    <string name="excute_searche_hint">选择日期</string>
+    <string name="excute_searche_seletbtn">选择</string>
+    <string name="excute_searche_excuted">已执行</string>
+    <string name="excute_searche_noexcuted">未执行</string>
+    
+    <string name="WaitExcuteList_title">待执行医嘱</string>
+    <string name="WaitExcuteList_sucess">执行成功</string>
+    <string name="WaitExcuteList_failure">执行失败</string>
+    <string name="ExcuteSearch_title">医嘱查询</string>
+    
+    <string name="Setting_SmartShell">扫描设置</string>
+    <string name="Setting_SmartShell_Setting">设置</string>
+    <string name="Setting_SmartShell_OK">启用</string>
+    <string name="setting_groupset">选择专业组</string>
+    
+
+    <string name="scanning">寻找设备...</string>
+    <string name="select_device">选择一个设备进行连接</string>
+    <string name="none_paired">没有配对设备</string>
+    <string name="none_found">未找到设备</string>
+    <string name="title_paired_devices">配对设备</string>
+    <string name="title_other_devices">其他可能的设备</string>
+    <string name="button_scan">扫描设备</string>
+    
+    <string name="signs_title">体征录入</string>
+    
+    <string name="signs_main_date">日期</string>
+    
+    <string name="signs_main_datebtn">选择</string>
+    <string name="signs_main_eventbtn">事件添加</string>
+    
+    <string name="signs_main_time">时间</string>
+    
+    <string name="signs_main_cktime">固定时间</string>
+    <string name="signs_main_failure">执行失败</string>
+    <string name="signs_main_sucess">执行成功</string>
+    <string name="signs_main_chesemess">请选择日期和时间</string>
+    <string name="excute_excute_arcimdesc">项目名</string>
+    <string name="excute_excute_excutedt">执行时间</string>
+    <string name="excute_excute_excutenur">执行人</string>
+    <string name="excute_excute_dose">剂量</string>
+    <string name="excute_excute_meth">用法</string>
+    <string name="excute_excute_seqno">关联号</string>
+    <string name="excute_excute_extim">时间</string>
+    <string name="excute_excute_labepisodeno">标本号</string>
+    <string name="excute_excute_labdate">执行日期</string>
+    <string name="excute_excute_stdatetime">开始时间</string>
+    <string name="excute_excute_phfreq">频次</string>
+    <string name="excute_excute_priority">优先级</string>
+    <string name="excute_excute_code">代码</string>
+    <string name="excute_excute_orderstatus">医嘱状态</string>
+    <string name="excute_excute_bedno">床</string>
+    <string name="Setting_SmartShell_close">停用</string>
+    <string name="exame_searche_bgdate">开始日期</string>
+    <string name="exame_searche_eddate">结束日期</string>
+    <string name="exam_studyno">检查号</string>
+    <string name="exam_itemdate">医嘱日期</string>
+    <string name="exam_itemstatus">是否发布</string>
+    <string name="exame_isill">是否阳性</string>
+    <string name="exam_locname">检查科室</string>
+    <string name="exam_memo">备注</string>
+    <string name="exam_yxret">阳性结果</string>
+    <string name="exam_ordtype">医嘱类型</string>
+    <string name="applyrt_prescno">处方号</string>
+    <string name="applyrt_ordqty">发药数量</string>
+    <string name="applyrt_reqqty">退药数量</string>
+    <string name="applyrt_unit">单位</string>
+    <string name="applyrt_status">状态</string>
+    <string name="applyrt_ordStartDate">生效时间</string>
+    <string name="applyrt_reson">退药原因</string>
+    <string name="applyrt_phaloc">发药科室</string>
+    <string name="orderenter_input_seqno">序号</string>
+    <string name="orderenter_input_prior">类型</string>
+    <string name="orderenter_input_name">名称</string>
+    <string name="orderenter_input_masterseqno">关联</string>
+    <string name="orderenter_input_doseqty">单次剂量</string>
+    <string name="orderenter_input_doseuom">单位</string>
+    <string name="orderenter_input_freq">频次</string>
+    <string name="orderenter_input_instr">用法</string>
+    <string name="orderenter_input_durz">疗程</string>
+    <string name="orderenter_input_packqty">数量</string>
+    <string name="orderenter_input_recdep">接收科室</string>
+    <string name="orderenter_input_skintest">皮试</string>
+    <string name="orderenter_input_procnote">备注</string>
+   
+    <string name="orderenter_input_arcsubcat">子类</string>
+    <string name="orderenter_input_price">价格</string>
+    <string name="orderenter_input_stockqty">库存</string>
+    <string name="orderenter_input_genericname">通用名</string>
+    <string name="orderenter_input_insu">医保</string>
+    <string name="orderenter_input_packuom">单位</string>
+    <string name="orderenter_input_add">增加</string>
+    <string name="orderenter_input_edit">修改</string>
+    <string name="orderenter_input_firstdaytimes">首日次数</string>
+    <string name="orderenter_main_priorrowid">类型</string>
+    <string name="BedGroup_code">代码</string>
+    <string name="BedGroup_desc">名称</string>
+    <string name="info_choice_patient">请选择病人</string>
+    <string name="info_choice_order_to_exec">请选择要执行的医嘱</string>
+    <string name="event_input_type">事件类型</string>
+    <string name="event_input_date">事件日期</string>
+    <string name="event_input_time">事件时间</string>
+    <string name="event_input_add_ok">事件增加成功</string>
+    <string name="event_input_add_false">事件增加失败</string>
+     <string name="event_input_delete_ok">事件删除成功</string>
+      <string name="event_input_delete_false">事件删除失败</string>
+      <string name="query_today">医嘱类型</string>
+       <string name="query_today_title">当天医嘱查询</string>
+    
+     <string name="WordMessage">交班信息</string>
+      <string name="ward_input_bgdate">开始日期</string>
+        <string name="ward_input_eddate">结束日期</string>
+     
+    
+    
+</resources>

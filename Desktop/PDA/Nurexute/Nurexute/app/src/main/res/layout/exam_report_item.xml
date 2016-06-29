@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+      <TextView
+        android:id="@+id/exam_arcimdesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:textColor="@color/black" 
+        android:textSize="16sp"
+        android:text="@string/excute_excute_arcimdesc"
+        />
+    
+    </LinearLayout>
+    
+    
+    <LinearLayout 
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal" >  
+		   <LinearLayout 
+		      android:layout_width="match_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_weight="1"
+		      android:orientation="vertical" >
+
+		      <TextView
+		          android:layout_width="match_parent"
+		          android:layout_height="wrap_content"
+		          android:layout_margin="1dp"
+		          android:text="@string/exam_itemdate"
+		          android:textSize="12sp" />
+
+		       <TextView
+			        android:id="@+id/exam_itemdate"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_margin="1dp"
+			        android:textColor="@color/black" 
+			        android:textSize="16sp"
+			        />
+		                 
+		   </LinearLayout>
+		   
+		   <LinearLayout 
+		      android:layout_width="match_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_weight="1"
+		      android:orientation="vertical" >
+
+		      <TextView
+		          android:layout_width="match_parent"
+		          android:layout_height="wrap_content"
+		          android:layout_margin="1dp"
+		          android:text="@string/exam_itemstatus"
+		          android:textSize="12sp" />
+
+		       <TextView
+			        android:id="@+id/exam_itemstatus"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_margin="1dp"
+			        android:textColor="@color/black" 
+			        android:textSize="16sp"
+			        />
+		                 
+		   </LinearLayout>
+
+		   <LinearLayout
+		       android:layout_width="match_parent"
+		       android:layout_height="wrap_content"
+		       android:layout_weight="1"
+		       android:orientation="vertical" >
+
+		       <TextView
+		           android:layout_width="match_parent"
+		           android:layout_height="wrap_content"
+		           android:layout_margin="1dp"
+		           android:text="@string/exam_studyno"
+		           android:textSize="12sp" />
+
+		       <TextView
+		           android:id="@+id/exam_studyno"
+		           android:layout_width="match_parent"
+		           android:layout_height="wrap_content"
+		           android:layout_margin="1dp"
+		           android:textColor="@color/black"
+		           android:textSize="16sp" />
+		   </LinearLayout>
+		   
+		    <LinearLayout 
+		      android:layout_width="match_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_weight="1"
+		      android:orientation="vertical" >
+
+		      <TextView
+		          android:layout_width="match_parent"
+		          android:layout_height="wrap_content"
+		          android:layout_margin="1dp"
+		          android:text="@string/exame_isill"
+		          android:textSize="12sp" />
+
+		       <TextView
+			        android:id="@+id/exame_isill"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_margin="1dp"
+			      
+			        android:textColor="@color/black" 
+			        android:textSize="16sp"
+			        />
+		                 
+		   </LinearLayout>  
+      
+     </LinearLayout>
+    
+
+      <LinearLayout 
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal" >
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="3"
+              android:orientation="vertical" >
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="1dp"
+                  android:text="@string/exam_ordtype"
+                  android:textSize="12sp" />
+
+              <TextView
+                  android:id="@+id/exam_ordertype"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="1dp"
+                  android:textColor="@color/black"
+                  android:textSize="16sp" />
+          </LinearLayout>
+
+          <LinearLayout 
+		      android:layout_width="match_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_weight="1"
+		      android:orientation="vertical" >
+
+		       <TextView
+		           android:layout_width="match_parent"
+		           android:layout_height="wrap_content"
+		           android:layout_margin="1dp"
+		           android:text="@string/exam_locname"
+		           android:textSize="12sp" />
+
+		       <TextView
+			        android:id="@+id/exam_locname"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_margin="1dp"
+			        android:textColor="@color/black" 
+			        android:textSize="16sp"
+			        />
+		                 
+		   </LinearLayout>
+
+          
+	</LinearLayout>
+ <LinearLayout 
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal" >
+           <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="3"
+              android:orientation="vertical" >
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="1dp"
+                  android:text="@string/exam_yxret"
+                  android:textSize="12sp" />
+
+              <TextView
+                  android:id="@+id/exam_yxret"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="1dp"
+                  android:textColor="@color/black"
+                  android:textSize="16sp" />
+          </LinearLayout>
+		   
+           <LinearLayout 
+		      android:layout_width="match_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_weight="1"
+		      android:orientation="vertical" >
+
+		       <TextView
+		           android:layout_width="match_parent"
+		           android:layout_height="wrap_content"
+		           android:layout_margin="1dp"
+		           android:text="@string/exam_memo"
+		           android:textSize="12sp" />
+
+		       <TextView
+			        android:id="@+id/exam_memo"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_margin="1dp"
+			        android:textColor="@color/black" 
+			        android:textSize="16sp"
+			        />
+		                 
+		   </LinearLayout>
+    </LinearLayout>  
+     
+</LinearLayout>

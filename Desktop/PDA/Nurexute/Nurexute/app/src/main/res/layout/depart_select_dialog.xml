@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/logindialog_space"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/departselect"
+    android:gravity="center_vertical" >
+                <TableLayout 
+	                android:orientation="vertical" 
+	                android:id="@+id/login_user_table" 
+	                android:layout_width="fill_parent" 
+	                android:layout_height="wrap_content" 
+	                android:layout_marginTop="10.0dip" 
+	                android:layout_marginLeft="15.0dip" 
+	                android:layout_marginRight="15.0dip" 
+	                android:layout_centerHorizontal="true"
+	                >
+	                
+                    <com.hxgy.nurexcute.widget.wheel.WheelView 
+			        android:layout_height="150dp"
+			        android:layout_width="fill_parent"
+			        android:layout_gravity="center_vertical"
+			        android:id="@+id/depart_select_wv" 
+			        />
+                
+                </TableLayout>
+                <TableLayout 
+	                android:orientation="vertical" 
+	                android:layout_width="fill_parent" 
+	                android:layout_height="wrap_content" 
+	                android:layout_below="@+id/login_user_table" 
+	                android:layout_alignLeft="@+id/login_user_table" 
+	                android:layout_alignRight="@+id/login_user_table"
+	                android:stretchColumns="0,2" >
+                   
+                    <LinearLayout 
+	                    android:layout_width="fill_parent" 
+	                    android:layout_height="wrap_content" 
+	                    android:layout_marginTop="5.0dip">
+                        <Button 
+	                        android:id="@+id/depart_select_ok" 
+	                        android:layout_width="fill_parent" 
+	                        android:layout_height="45dip" 
+	                        android:textSize="@dimen/text_size_20"
+	                        android:text="@string/depart_select_ok" 
+	                        android:background="@drawable/select_depart_selector" />
+                    </LinearLayout>
+                </TableLayout>
+            </RelativeLayout>
+  

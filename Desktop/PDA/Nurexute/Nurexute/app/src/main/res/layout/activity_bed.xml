@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/FrameLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+ <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="50dp"
+         >
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp" 
+        android:background="@drawable/background_key"
+       
+        >
+
+        <TextView
+            android:id="@+id/lb_bed_item_patno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/bed_title"
+            android:singleLine="true"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/signs_mian_tvtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/pull_to_refresh_tap_serche" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_bed_errInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/signs_main_bedno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+    </LinearLayout>
+
+    <com.hxgy.nurexcute.widget.PullToRefreshListView
+        android:id="@+id/lv_bed_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#CDD"
+        android:dividerHeight="1dp" >
+    </com.hxgy.nurexcute.widget.PullToRefreshListView>
+   
+ </LinearLayout>
+ 
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/background_key"
+         >
+
+        <LinearLayout
+            android:id="@+id/munu_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="60dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/menu_hushizhixing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bed_btn_patinet" />
+
+            <Button
+                android:id="@+id/menu_vitalsigns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bed_btn_excute" />
+
+            <Button
+                android:id="@+id/menu_patientlist_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bed_btn_worter" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bed_btn_Signs" />
+
+            
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</FrameLayout>

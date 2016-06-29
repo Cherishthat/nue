@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:text="@string/excute_searche_bgdate" />
+
+        <EditText
+            android:id="@+id/exam_bgdate"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:gravity="left"
+             android:layout_width="0dp"
+             
+            android:hint="@string/excute_searche_hint" >
+
+         
+        </EditText>
+
+        <Button
+            android:id="@+id/excute_search_bgdate_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="@string/excute_searche_seletbtn" />
+
+    </LinearLayout>
+
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    >
+    
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+             android:layout_width="0dp"
+            android:gravity="center"
+            android:text="@string/excute_searche_eddate" />
+
+        <EditText
+            android:id="@+id/excute_search_eddate"
+            android:layout_height="wrap_content"
+            
+            android:layout_weight="6"
+             android:layout_width="0dp"
+            android:gravity="left"
+            android:hint="@string/excute_searche_hint"
+            android:text="" />
+
+        <Button
+            android:id="@+id/excute_search_eddate_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="@string/excute_searche_seletbtn" />
+
+   </LinearLayout>
+
+	<ListView
+	    android:id="@+id/excute_search_ordtypelist"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" >
+	</ListView>
+
+</LinearLayout>

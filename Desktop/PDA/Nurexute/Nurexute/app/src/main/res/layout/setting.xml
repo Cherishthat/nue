@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/Setting_SmartShell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       
+        android:background="@drawable/table_mid_bg" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/abs__ic_menu_share_holo_light" />
+
+        <TextView
+            android:id="@+id/signs_mian_tvtime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:text="@string/Setting_SmartShell"
+            android:textSize="20sp" >
+
+        </TextView>
+         </LinearLayout>
+        <LinearLayout
+        android:id="@+id/setting_bedgroupset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/table_mid_bg" >
+         <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/abs__ic_menu_share_holo_light" />
+
+        <TextView
+            
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:text="@string/setting_groupset"
+            android:textSize="20sp" >
+
+        </TextView>
+
+    </LinearLayout>
+
+</LinearLayout>

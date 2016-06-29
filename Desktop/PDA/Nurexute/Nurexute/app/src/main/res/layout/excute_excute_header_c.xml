@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+      <TextView
+          android:id="@+id/excute_excute_head3_arcimdes"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_margin="1dp"
+          android:text="@string/excute_excute_arcimdesc"
+          android:textColor="@color/black" 
+          android:textSize="16sp"
+          />
+    
+    </LinearLayout>
+    
+    
+    <LinearLayout 
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal" >
+          <LinearLayout 
+		      android:layout_width="match_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_weight="1"
+		      android:orientation="vertical" >
+		       <TextView
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_margin="1dp"
+			        android:textSize="12sp"
+			        android:text="@string/excute_excute_seqno"
+			        />
+
+		       <TextView
+		           android:id="@+id/orderenter_select_subcate"
+		           android:layout_width="match_parent"
+		           android:layout_height="wrap_content"
+		           android:layout_margin="1dp"
+		           android:textColor="@color/black"
+		           android:textSize="16sp" />
+		                 
+		   </LinearLayout>  
+		    
+		   
+		   <LinearLayout 
+		      android:layout_width="match_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_weight="1"
+		      android:orientation="vertical" >
+		      <TextView
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_margin="1dp"
+		         android:textSize="12sp"
+		        android:text="@string/excute_excute_excutenur"
+		       />
+		       <TextView
+			        android:id="@+id/orderenter_selectuom"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_margin="1dp"
+			        android:textColor="@color/black" 
+			         android:textSize="16sp"
+			        />
+		                 
+		   </LinearLayout>  
+		   
+		    <LinearLayout 
+		      android:layout_width="match_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_weight="1"
+		      android:orientation="vertical" >
+		      <TextView
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_margin="1dp"
+		         android:textSize="12sp"
+		        android:text="@string/excute_excute_labdate"
+		       />
+		       <TextView
+			        android:id="@+id/orderenter_select_price"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_margin="1dp"
+			        android:textColor="@color/black" 
+			         android:textSize="16sp"
+			        />
+		                 
+		   </LinearLayout>  
+		    <LinearLayout 
+		      android:layout_width="match_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_weight="1"
+		      android:orientation="vertical" >
+		       <TextView
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_margin="1dp"
+			         android:textSize="12sp"
+			        android:text="@string/excute_excute_dose"
+			        />
+		       <TextView
+			        android:id="@+id/orderenter_select_stockqty"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_margin="1dp"
+			        android:textColor="@color/black" 
+			         android:textSize="16sp"
+			        />
+		                 
+		   </LinearLayout>
+      
+     </LinearLayout>
+    
+
+      <LinearLayout 
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal" >
+         
+		   
+           <LinearLayout 
+		      android:layout_width="match_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_weight="1"
+		      android:orientation="vertical" >
+		       <TextView
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_margin="1dp"
+			        android:text="@string/excute_excute_meth"
+			         android:textSize="12sp"
+			        />
+		       <TextView
+			        android:id="@+id/orderenter_select_genericname"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_margin="1dp"
+			         android:textSize="16sp"
+			         android:textColor="@color/black" 
+			        />
+		                 
+		   </LinearLayout>
+		   
+            <LinearLayout 
+		      android:layout_width="match_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_weight="1"
+		      android:orientation="vertical" >
+		       <TextView
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_margin="1dp"
+			         android:textSize="12sp"
+			        android:text="@string/excute_excute_phfreq"
+			        />
+		       <TextView
+			        android:id="@+id/orderenter_select_insu"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_margin="1dp"
+			         android:textSize="16sp"
+			         android:textColor="@color/black" 
+			        />
+		                 
+		   </LinearLayout>
+		   
+            <LinearLayout 
+		      android:layout_width="match_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_weight="1"
+		      android:orientation="vertical" >
+		       <TextView
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_margin="1dp"
+			         android:textSize="12sp"
+			        android:text="@string/excute_excute_priority"
+			        />
+		       <TextView
+			        android:id="@+id/excute_excute_head3_priority"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_margin="1dp"
+			         android:textSize="16sp"
+			         android:textColor="@color/black" 
+			        />
+		                 
+		   </LinearLayout>
+		   
+           <LinearLayout 
+		      android:layout_width="match_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_weight="1"
+		      android:orientation="vertical" >
+		   </LinearLayout>
+	</LinearLayout>
+	
+
+</LinearLayout>
+
+
+
+
+
+
+

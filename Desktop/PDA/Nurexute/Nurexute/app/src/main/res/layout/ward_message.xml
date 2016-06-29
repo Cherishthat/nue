@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/white2"
+  
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:text="@string/ward_input_bgdate" />
+
+        <EditText
+            android:id="@+id/ward_input_bgdate"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:inputType="text"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ems="10" />
+        </LinearLayout>
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:text="@string/ward_input_eddate" />
+
+        <EditText
+            android:id="@+id/ward_input_eddate"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:inputType="text"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ems="10" />
+        </LinearLayout>
+   <com.hxgy.nurexcute.widget.PullToRefreshListView
+        android:id="@+id/ward_message_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/white2"
+        android:dividerHeight="3dp" >
+        
+    </com.hxgy.nurexcute.widget.PullToRefreshListView>
+
+ 
+   
+</LinearLayout>

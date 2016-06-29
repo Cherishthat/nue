@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hxgy.nurexcute"
+    android:versionCode="4"
+    android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="17"
+        tools:overrideLibrary="com.actionbarsherlock"
+        />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.BCREADER"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+
+        android:theme="@style/Theme.Sherlock.Light" android:screenOrientation="portrait">
+        <activity android:theme="@style/Theme.ZoomLight" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:launchMode="singleTask"
+            android:name=".AppStart"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.Login" android:theme="@style/Theme.ZoomLight" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:launchMode="singleTask"/>
+        <activity android:name=".ui.MainActivity"   android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".ui.LeftAndRightActivity"  android:configChanges="keyboardHidden|orientation" />
+        <activity android:name=".ui.ExcuteMainActivity"  android:configChanges="keyboardHidden|orientation" />
+        <activity android:name=".ui.WaitExcuteList"  android:configChanges="keyboardHidden|orientation" android:launchMode="singleTask" />
+        <activity android:name=".ui.ExcuteSearch"  android:configChanges="keyboardHidden|orientation"  android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity android:name=".ui.BlueSetting"  android:configChanges="keyboardHidden|orientation"  />
+        <activity android:name=".ui.ExamResult"  android:configChanges="keyboardHidden|orientation"  />
+        <activity android:name=".ui.ApplyRtReasonDia"  android:theme="@android:style/Theme.Dialog"  />
+        <activity android:name=".ui.OrderEnterItemSelect"  android:theme="@android:style/Theme.Dialog"  />
+        <activity android:name=".ui.SettingBedGroup"  android:configChanges="keyboardHidden|orientation"  />
+        <activity android:name=".ui.OrderEnterInput"  android:configChanges="keyboardHidden|orientation"  />
+        <activity android:name=".ui.EventInput"  android:configChanges="keyboardHidden|orientation"  />
+
+        <activity android:name="com.smartshell.bluetooth.DeviceListActivity" android:label="@string/select_device"
+            android:theme="@android:style/Theme.Dialog"
+            android:configChanges="orientation|keyboardHidden" />
+        <activity android:name="org.achartengine.GraphicalActivity"  android:configChanges="keyboardHidden|orientation" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity android:name=".ui.EventMain"  android:configChanges="keyboardHidden|orientation"  android:launchMode="singleTask" />
+        <!--
+        <service android:name="com.smartshell.bluetooth.BluetoothService">
+            <intent-filter>
+                <action android:name="com.smartshell.bluetooth.service" />
+            </intent-filter>
+        </service>
+           <receiver android:name="com.smartshell.bluetooth.PersistentReceiver">
+             <intent-filter>
+                <action android:name="action.broadcast.persistent.smartshell" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".BarCodeBroadcastReceiver" />
+         -->
+    </application>
+
+</manifest>

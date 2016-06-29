@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:text="@string/orderenter_input_seqno" />
+
+	 <LinearLayout
+         android:layout_width="0dp"
+         android:layout_height="wrap_content" 
+         android:layout_weight="3"
+         >
+        
+        <EditText
+            android:id="@+id/orderenter_input_seqno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:enabled="false" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:text="@string/orderenter_input_prior" />
+		 <LinearLayout
+		
+          android:layout_height="wrap_content" 
+          android:layout_width="0dp"
+          android:layout_weight="3"
+         >
+        <Spinner
+            android:id="@+id/orderenter_input_priority"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            
+             />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:text="@string/orderenter_input_name" />
+
+ <LinearLayout
+     
+          android:layout_height="wrap_content" 
+          android:layout_width="0dp"
+          android:layout_weight="3">
+        <EditText
+             android:id="@+id/orderenter_input_desc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:focusable="true"
+            android:selectAllOnFocus="true" 
+            android:ems="10" />
+        </LinearLayout>
+    </LinearLayout>
+
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:text="@string/orderenter_input_firstdaytimes" />
+	<LinearLayout
+     
+          android:layout_height="wrap_content" 
+          android:layout_width="0dp"
+          android:orientation="horizontal"
+          android:layout_weight="3">
+        <EditText
+            android:id="@+id/orderenter_input_firstdaytimes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10" />
+        </LinearLayout>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:text="@string/orderenter_input_masterseqno" />
+	<LinearLayout
+     
+          android:layout_height="wrap_content" 
+          android:layout_width="0dp"
+          android:orientation="horizontal"
+          android:layout_weight="3">
+        <EditText
+            android:id="@+id/orderenter_input_ordermasterseqno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:text="@string/orderenter_input_doseqty" />
+<LinearLayout
+     
+          android:layout_height="wrap_content" 
+          android:layout_width="0dp"
+          android:orientation="horizontal"
+          android:layout_weight="3">
+        <EditText
+            android:id="@+id/orderenter_input_orderdoseqty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10" />
+       
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:text="@string/orderenter_input_doseuom" />
+	<LinearLayout
+    	  
+          android:layout_height="wrap_content" 
+          android:layout_width="0dp"
+          android:orientation="horizontal"
+          android:layout_weight="3">
+        <EditText
+            android:id="@+id/orderenter_input_orderdoseuom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10" />
+         <Spinner  
+            android:id="@+id/orderenter_input_orderdoseuom_sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            
+            />
+    </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/TextView12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:text="@string/orderenter_input_freq" />
+	<LinearLayout
+    	  
+          android:layout_height="wrap_content" 
+          android:layout_width="0dp"
+          android:orientation="horizontal"
+          android:layout_weight="3">
+        <EditText
+            android:id="@+id/orderenter_input_orderfreq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10" />
+        <Spinner  
+            android:id="@+id/orderenter_input_orderfreq_sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            
+            />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+         >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:text="@string/orderenter_input_instr" />
+	<LinearLayout
+    	
+          android:layout_height="wrap_content" 
+          android:layout_width="0dp"
+          android:orientation="horizontal"
+          android:layout_weight="3">
+        <EditText
+            android:id="@+id/orderenter_input_orderinstr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10" />
+        <Spinner  
+            android:id="@+id/orderenter_input_orderinstr_sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            
+            />
+        
+</LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:text="@string/orderenter_input_durz" />
+	<LinearLayout
+          android:layout_height="wrap_content" 
+          android:layout_width="0dp"
+          android:orientation="horizontal"
+          android:layout_weight="3">
+
+        <EditText
+            android:id="@+id/orderenter_input_orderdur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10" />
+        <Spinner  
+            android:id="@+id/orderenter_input_orderdur_sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            
+            />
+        
+
+</LinearLayout>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:text="@string/orderenter_input_price" />
+<LinearLayout
+    	
+          android:layout_height="wrap_content" 
+          android:layout_width="0dp"
+          android:layout_weight="3">
+        <EditText
+             android:id="@+id/orderenter_input_orderprice"
+            android:layout_width="match_parent"
+            android:enabled="false"
+            android:layout_height="wrap_content"
+            android:ems="10" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:text="@string/orderenter_input_packqty" />
+<LinearLayout
+    	
+          android:layout_height="wrap_content" 
+          android:layout_width="0dp"
+          android:layout_weight="3">
+        <EditText
+             android:id="@+id/orderenter_input_orderpackqty"
+            android:layout_width="match_parent"
+            android:inputType="phone"
+            android:layout_height="wrap_content"
+            android:ems="10" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:text="@string/orderenter_input_packuom" />
+<LinearLayout
+    	
+          android:layout_height="wrap_content" 
+          android:layout_width="0dp"
+          android:layout_weight="3">
+        <EditText
+             android:id="@+id/orderenter_input_orderpackuom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10" />
+        </LinearLayout>
+
+    </LinearLayout>
+    
+    
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:text="@string/orderenter_input_recdep" />
+<LinearLayout
+    	 
+          android:layout_height="wrap_content" 
+          android:layout_width="0dp"
+          android:layout_weight="3">
+        <Spinner
+            android:id="@+id/orderenter_input_orderrecdep"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        </LinearLayout>
+
+    </LinearLayout>
+    
+     
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:text="@string/orderenter_input_skintest" />
+<LinearLayout
+    	
+          android:layout_height="wrap_content" 
+          android:layout_width="0dp"
+          android:orientation="horizontal"
+          android:layout_weight="3">
+        <EditText
+            android:id="@+id/orderenter_input_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:ems="10" />
+        <Spinner
+            android:id="@+id/orderenter_input_action_sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+        </LinearLayout>
+
+    </LinearLayout>
+    
+    <Button 
+            android:id="@+id/orderenter_input_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/orderenter_input_add"
+        
+        />
+
+          </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

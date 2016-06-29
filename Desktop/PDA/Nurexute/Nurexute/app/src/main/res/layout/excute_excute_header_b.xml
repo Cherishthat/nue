@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+      <TextView
+        android:id="@+id/excute_excute_head2_arcimdesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:textColor="@color/black" 
+        android:textSize="16sp"
+        android:text="@string/excute_excute_arcimdesc"
+        />
+    
+    </LinearLayout>
+    
+    
+    <LinearLayout 
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal" >
+          <LinearLayout 
+		      android:layout_width="match_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_weight="5"
+		      android:orientation="vertical" >
+		       <TextView
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_margin="1dp"
+			        android:textSize="12sp"
+			        android:text="@string/excute_excute_labepisodeno"
+			        />
+		       <TextView
+			        android:id="@+id/excute_excute_head2_labepisodeno"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_margin="1dp"
+			        android:textColor="@color/black" 
+			        android:textSize="16sp"
+			        />
+		                 
+		   </LinearLayout>  
+		   <LinearLayout 
+		      android:layout_width="match_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_weight="5"
+		      android:orientation="vertical" >
+		      <TextView
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_margin="1dp"
+		        android:textSize="12sp"
+		        android:text="@string/excute_excute_excutenur"
+		       />
+		       <TextView
+			        android:id="@+id/applyrt_ordqty"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_margin="1dp"
+			        android:textColor="@color/black" 
+			        android:textSize="16sp"
+			        />
+		                 
+		   </LinearLayout>    
+		   
+		   <LinearLayout 
+		      android:layout_width="match_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_weight="4"
+		      android:orientation="vertical" >
+		      <TextView
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_margin="1dp"
+		        android:text="@string/excute_excute_labdate"
+		        android:textSize="12sp"
+		       />
+		       <TextView
+			        android:id="@+id/applyrt_reqqty"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_margin="1dp"
+			        android:textColor="@color/black" 
+			        android:textSize="16sp"
+			        />
+		                 
+		   </LinearLayout>  
+		   
+		    <LinearLayout 
+		      android:layout_width="match_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_weight="4"
+		      android:orientation="vertical" >
+		      <TextView
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_margin="1dp"
+		        android:textSize="12sp"
+		        android:text="@string/excute_excute_stdatetime"
+		       />
+		       <TextView
+			        android:id="@+id/applyrt_unit"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_margin="1dp"
+			        android:textColor="@color/black" 
+			        android:textSize="16sp"
+			        />
+		                 
+		   </LinearLayout>  
+      
+     </LinearLayout>
+    
+
+      <LinearLayout 
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal" >
+          <LinearLayout 
+		      android:layout_width="0dip"
+		      android:layout_height="wrap_content"
+		      android:layout_weight="1"
+		      android:orientation="vertical" >
+		       <TextView
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_margin="1dp"
+			        android:textSize="12sp"
+			        android:text="@string/excute_excute_code"
+			        />
+		       <TextView
+			        android:id="@+id/applyrt_status"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:textColor="@color/black" 
+			        android:layout_margin="1dp"
+			        android:textSize="16sp"
+			        />
+		                 
+		   </LinearLayout>
+		    <LinearLayout 
+		      android:layout_width="0dip"
+		      android:layout_height="wrap_content"
+		      android:layout_weight="1"
+		      android:orientation="vertical" >
+		       <TextView
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_margin="1dp"
+			        android:textSize="12sp"
+			        android:text="@string/excute_excute_orderstatus"
+			        />
+		       <TextView
+			        android:id="@+id/applyrt_orderstatus"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:textColor="@color/black" 
+			        android:layout_margin="1dp"
+			        android:textSize="16sp"
+			        />
+		                 
+		   </LinearLayout>
+           
+	</LinearLayout>
+	
+
+</LinearLayout>
+
+
+
+
+
+
+
