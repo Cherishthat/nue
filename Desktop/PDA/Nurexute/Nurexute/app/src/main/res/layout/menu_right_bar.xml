@@ -167,7 +167,46 @@
             android:text="@string/menu_right_bar_worter"
             android:textSize="16sp" />
     </LinearLayout>
+     <LinearLayout
+         android:id="@+id/menu_right_bar_injectDrug"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:visibility="gone"
+         android:orientation="horizontal" >
 
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_vertical"
+             android:src="@drawable/patient_list_info_over" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_vertical"
+
+             android:text="@string/bed_btn_injectdrug"
+             android:textSize="16sp" />
+     </LinearLayout>
+     <LinearLayout
+         android:id="@+id/menu_right_bar_BloodSugar"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal" >
+
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_vertical"
+             android:src="@drawable/patient_list_info_over" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_vertical"
+             android:text="@string/bed_btn_bloodsugar"
+             android:textSize="16sp" />
+     </LinearLayout>
     <LinearLayout
         android:id="@+id/menu_right_bar_labno"
         android:layout_width="match_parent"
@@ -275,7 +314,7 @@
         android:id="@+id/menu_right_bar_wordMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-            android:visibility="gone"
+        android:visibility="gone"
         android:orientation="horizontal" >
 
         <ImageView

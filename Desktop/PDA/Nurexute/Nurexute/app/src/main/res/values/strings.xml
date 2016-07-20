@@ -11,6 +11,12 @@
     <string name="bed_btn_patinet">基本信息</string>
     <string name="bed_btn_excute">医嘱执行</string>
     <string name="bed_btn_worter">临床输液</string>
+    <string name="bed_btn_injectdrug">注射用药</string>
+    <string name="bed_btn_bloodsugar">血糖录入</string>
+    <string name="bs_name_fasting">空腹</string>
+    <string name="bs_name_testproject">测试项目:</string>
+    <string name="bs_name_result">结果:</string>
+    <string name="bs_name_testtime">测试时间:</string>
     <string name="bed_btn_Signs">生命体征</string>
     <string name="login_dialog_account">账户:</string>
     <string name="login_dialog_account_hint">工号</string>
@@ -42,6 +48,7 @@
     <string name="menu_right_bar_excute">医嘱执行</string>
      <string name="menu_right_bar_ordertoday">当日医嘱查询</string>
     <string name="menu_right_bar_worter">临床输液</string>
+    <string name="menu_right_bar_inject">注射用药</string>
     <string name="menu_right_bar_Signs">生命体征</string>
     <string name="menu_right_bar_Setting">设置</string>
     <string name="menu_right_bar_about">关于</string>

@@ -33,8 +33,10 @@ import com.hxgy.nurexcute.common.UIHelper;
 import com.hxgy.nurexcute.dto.PatientDTO;
 import com.hxgy.nurexcute.dto.PatientDetailDTO;
 import com.hxgy.nurexcute.ui.frg.ApplyRT;
+import com.hxgy.nurexcute.ui.frg.BloodSugar;
 import com.hxgy.nurexcute.ui.frg.ChangeDepart;
 import com.hxgy.nurexcute.ui.frg.ExameReport;
+import com.hxgy.nurexcute.ui.frg.ExcuteExcuteINJECT;
 import com.hxgy.nurexcute.ui.frg.ExcuteExcuteLAB;
 import com.hxgy.nurexcute.ui.frg.ExcuteExcuteMainA;
 import com.hxgy.nurexcute.ui.frg.ExcuteExcutePHA;
@@ -308,6 +310,16 @@ public class MainActivity extends BaseActivity  {
 				args.putSerializable("grpCode", "0");
 				mContent.setArguments(args);
 				break;
+			case MenuRighBar.INJECT:
+				mContent = new ExcuteExcuteINJECT();
+				args.putSerializable("grpCode", "4");
+				mContent.setArguments(args);
+				break;
+			case MenuRighBar.BLOODSUGAR:
+				mContent=new BloodSugar();
+				args.putSerializable("greCode","5");
+				mContent.setArguments(args);
+				break;
 			case MenuRighBar.LABNO:
 				mContent = new ExcuteExcuteLAB();
 				args.putSerializable("grpCode", "1");
@@ -575,8 +587,6 @@ public class MainActivity extends BaseActivity  {
 		public void onReceive(Context paramContext, Intent paramIntent)
 		{
 			String action = paramIntent.getAction();
-
-
 			String barCode=paramIntent.getStringExtra("BARCODE");
 			barCode=barCode.replaceAll("\r|\n","");
 			toBarCode(barCode,paramContext);

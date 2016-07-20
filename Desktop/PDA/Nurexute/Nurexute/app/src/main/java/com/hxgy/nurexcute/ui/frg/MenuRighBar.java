@@ -16,6 +16,8 @@ public class MenuRighBar extends Fragment {
    public static final int PATIENTINFO=1;
    public static final int EXCUTE=2;
    public static final int WORTER=3;
+   public static final int INJECT=16;    //注射用药
+   public static final int BLOODSUGAR=17; //血糖录入
    public static final int SIGHS=4;
    public static final int SETTING=5;
    public static final int ABOUT=6;
@@ -36,6 +38,8 @@ public class MenuRighBar extends Fragment {
    private LinearLayout setting;
    private LinearLayout sings;
    private LinearLayout worter;
+   private LinearLayout inject;
+   private LinearLayout bloodsugar;
    private LinearLayout labno;
    private LinearLayout whxr;
    private LinearLayout pha;
@@ -88,6 +92,13 @@ public void setComm(int comm) {
 		
 		worter=(LinearLayout) getActivity().findViewById(R.id.menu_right_bar_worter);
 		worter.setOnClickListener(click);
+
+		inject=(LinearLayout) getActivity().findViewById(R.id.menu_right_bar_injectDrug);
+		inject.setOnClickListener(click);
+
+		bloodsugar=(LinearLayout) getActivity().findViewById(R.id.menu_right_bar_BloodSugar);
+		bloodsugar.setOnClickListener(click);
+
 		ordertoday=(LinearLayout) getActivity().findViewById(R.id.menu_right_bar_ordertoday);
 		ordertoday.setOnClickListener(clickNoAdm);
 		
@@ -165,6 +176,12 @@ public void setComm(int comm) {
 				break;
 			case R.id.menu_right_bar_worter:
 				comm=WORTER;
+				break;
+			case R.id.menu_right_bar_injectDrug:
+				comm=INJECT;
+				break;
+			case R.id.menu_right_bar_BloodSugar:
+				comm=BLOODSUGAR;
 				break;
 			case R.id.menu_right_bar_labno:
 				comm=LABNO;

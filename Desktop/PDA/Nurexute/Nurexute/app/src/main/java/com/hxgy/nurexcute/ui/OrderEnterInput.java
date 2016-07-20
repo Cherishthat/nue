@@ -1,9 +1,18 @@
 package com.hxgy.nurexcute.ui;
 
-import java.util.List;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.Spinner;
 
 import com.actionbarsherlock.app.SherlockActivity;
-import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -24,17 +33,7 @@ import com.hxgy.nurexcute.dto.OrderDocEnterDTO;
 import com.hxgy.nurexcute.dto.PatientDTO;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 
-import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.KeyEvent;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.Spinner;
+import java.util.List;
 
 public class OrderEnterInput extends SherlockActivity {
 	private OrdEnterBaseDTO baseData;
@@ -113,7 +112,7 @@ public class OrderEnterInput extends SherlockActivity {
 	    if (editOrder!=null) {
 	    	add.setText(R.string.orderenter_input_edit);
 	    }
-		
+
 	}
 //	 @Override
 //	    public boolean onCreateOptionsMenu(Menu menu) {
@@ -157,6 +156,7 @@ public class OrderEnterInput extends SherlockActivity {
 			enterObj.setOrderfirstdaytimes(orderfirstdaytimes.getText().toString());
 //			priority.setRowid();
 			BaseDataDTO descdto= new BaseDataDTO();
+
 			descdto.setRowid(desc.getTag().toString());
 			descdto.setDesc(desc.getText().toString());
 			enterObj.setDesc(descdto);

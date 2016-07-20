@@ -1,12 +1,7 @@
 package com.hxgy.nurexcute.ui.frg;
 
 
-import java.util.Calendar;
-import java.util.List;
-
-
 import android.content.Context;
-
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -15,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -24,7 +18,6 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.hxgy.nurexcute.CurUser;
 import com.hxgy.nurexcute.R;
-
 import com.hxgy.nurexcute.adapter.QueryTodayAdapter;
 import com.hxgy.nurexcute.api.ApiClient;
 import com.hxgy.nurexcute.common.UIHelper;
@@ -32,10 +25,10 @@ import com.hxgy.nurexcute.dto.ExcuteOrderDTO;
 import com.hxgy.nurexcute.dto.OrderTypeDTO;
 import com.hxgy.nurexcute.ui.ExcuteContent;
 import com.hxgy.nurexcute.ui.MainActivity;
-
-
-
 import com.loopj.android.http.AsyncHttpResponseHandler;
+
+import java.util.Calendar;
+import java.util.List;
 
 public class QueryTodayOrder  extends Fragment implements ExcuteContent{
 	private Context context;
@@ -74,7 +67,7 @@ public class QueryTodayOrder  extends Fragment implements ExcuteContent{
 
 	private void init() {
 		Calendar cal = Calendar.getInstance();
-		this.now=cal.get(Calendar.YEAR)+"-"+(cal.get(Calendar.MONTH)+1)+"-"+cal.get(Calendar.DAY_OF_MONTH);;
+		this.now=cal.get(Calendar.YEAR)+"-"+(cal.get(Calendar.MONTH)+1)+"-"+cal.get(Calendar.DAY_OF_MONTH);
 		getActivity().setTitle(R.string.query_today_title);
 		querytodylist=(ListView) getActivity().findViewById(R.id.querytody_list);
 		spinner=(Spinner) getActivity().findViewById(R.id.querytody_ordertype);

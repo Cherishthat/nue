@@ -65,7 +65,6 @@ public class DialogTool {
 		builder.setPositiveButton(positiveBtnName, positiveBtnListener);
 		builder.setNeutralButton(negativeBtnName, negativeBtnListener);
 		dialog = builder.create();
-
 		return dialog;
 	}
 

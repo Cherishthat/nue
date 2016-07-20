@@ -1,50 +1,29 @@
 package com.hxgy.nurexcute.ui.frg;
 
-import java.util.Calendar;
-import java.util.List;
+import android.content.Context;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemLongClickListener;
+import android.widget.ListView;
+import android.widget.TextView;
 
-import com.example.comm.jason.RunServerMethod;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.hxgy.nurexcute.App;
 import com.hxgy.nurexcute.R;
 import com.hxgy.nurexcute.adapter.ExamReportAdapter;
 import com.hxgy.nurexcute.api.ApiClient;
 import com.hxgy.nurexcute.common.TipHelper;
 import com.hxgy.nurexcute.common.UIHelper;
 import com.hxgy.nurexcute.dto.ExamOrderDTO;
-import com.hxgy.nurexcute.dto.ExcuteOrderDTO;
 import com.hxgy.nurexcute.dto.PatientDTO;
-import com.hxgy.nurexcute.dto.PatientDetailDTO;
-import com.hxgy.nurexcute.ui.ExamResult;
-import com.hxgy.nurexcute.ui.ExcuteSearch;
 import com.hxgy.nurexcute.ui.MainActivity;
-import com.hxgy.nurexcute.ui.frg.ExcuteMain.LVLongClickListener;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.app.Application;
-import android.app.DatePickerDialog;
-import android.app.DatePickerDialog.OnDateSetListener;
-import android.content.Context;
-import android.graphics.Typeface;
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.View.OnClickListener;
-import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.DatePicker;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.ProgressBar;
-import android.widget.TextView;
-import android.widget.AdapterView.OnItemLongClickListener;
+import java.util.List;
 
 
 public class ExameReport extends Fragment {
@@ -66,16 +45,6 @@ public class ExameReport extends Fragment {
 //	 private  int EDMOTH=0;
 //	 private  int EDDAY=0;
 //	 private Calendar cal = Calendar.getInstance();
-
-
-
-
-	@Override
-	public void onAttach(Activity activity) {
-		super.onAttach(activity);
-
-
-	}
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {

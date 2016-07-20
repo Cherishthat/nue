@@ -1,7 +1,5 @@
 package com.hxgy.nurexcute.widget;
 
-import com.hxgy.nurexcute.R;
-
 import android.app.Dialog;
 import android.content.Context;
 import android.view.Gravity;
@@ -10,7 +8,14 @@ import android.view.View;
 import android.view.WindowManager.LayoutParams;
 import android.widget.TextView;
 
+import com.hxgy.nurexcute.R;
 
+/**
+ * 加载对话框控�?
+ * @author liux (http://my.oschina.net/liux)
+ * @version 1.0
+ * @created 2012-3-21
+ */
 public class LoadingDialog extends Dialog {
 
 	private Context mContext;
@@ -27,10 +32,11 @@ public class LoadingDialog extends Dialog {
 		View layout = inflater.inflate(R.layout.loadingdialog, null);
 		loadtext = (TextView) layout.findViewById(R.id.loading_text);
 		setContentView(layout);
-
+		
+		// 设置window属�?
 		lp = getWindow().getAttributes();
 		lp.gravity = Gravity.CENTER;
-		lp.dimAmount = 0;
+		lp.dimAmount = 0; // 去背景遮�?
 		lp.alpha = 1.0f;
 		getWindow().setAttributes(lp);
 

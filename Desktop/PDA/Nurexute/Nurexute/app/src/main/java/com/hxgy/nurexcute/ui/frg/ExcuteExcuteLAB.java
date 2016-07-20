@@ -56,9 +56,9 @@ public class ExcuteExcuteLAB extends ExcuteExcuteMainA {
 			super.onSuccess(result);
 			Gson gson = new Gson();
 			try {
-				List<LabNoDTO> p = gson.fromJson(result,new TypeToken<List<LabNoDTO>>(){}.getType() );
-				ExcuteExcuteGetLabNoAdapter adapter = new ExcuteExcuteGetLabNoAdapter(context, p);
-				lv.setAdapter(adapter);
+			List<LabNoDTO> p = gson.fromJson(result,new TypeToken<List<LabNoDTO>>(){}.getType() );
+			ExcuteExcuteGetLabNoAdapter adapter = new ExcuteExcuteGetLabNoAdapter(context, p);
+			lv.setAdapter(adapter);
 			}catch (Exception ex) {
 				UIHelper.ToastMessage(context, ex.getMessage());
 			}
@@ -68,10 +68,12 @@ public class ExcuteExcuteLAB extends ExcuteExcuteMainA {
 		public void onFailure(Throwable throwable, String arg1) {
 			super.onFailure(throwable, arg1);
 			UIHelper.ToastFailMessage( this.context, throwable);
+			
 		}
 		@Override
 		public void onFinish() {
 			if(main!=null){
+					
 				main.setSupportProgressBarIndeterminateVisibility(false);
 			}
 		}

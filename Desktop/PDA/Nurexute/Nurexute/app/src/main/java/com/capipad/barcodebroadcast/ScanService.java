@@ -1,20 +1,7 @@
 package com.capipad.barcodebroadcast;
 
-import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-
-import com.capipad.barcodebroadcast.barcode;
-
-
-
-
-
-import com.hxgy.nurexcute.R;
 import android.app.Service;
 import android.content.BroadcastReceiver;
-import android.content.ClipboardManager;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -23,8 +10,9 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.Looper;
 import android.os.Message;
-import android.provider.Settings;
 import android.util.Log;
+
+import com.hxgy.nurexcute.R;
 
 public class ScanService extends Service {
 	private final String TAG = "ScanService";

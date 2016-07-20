@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/blood"
+    android:layout_height="match_parent">
+    <CheckBox
+        android:layout_gravity="center"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:text="@string/bs_name_fasting"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        />
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/bs_name_testproject"
+        android:typeface="monospace"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        />
+    <Spinner
+        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:id="@+id/TestProjectValue"
+        android:spinnerMode="dialog"
+        />
+    <TextView
+        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:text="@string/bs_name_result"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:typeface="sans"
+        />
+    <EditText
+        android:layout_height="50dp"
+        android:layout_width="250dp"
+        android:id="@+id/ResultValue"
+        android:textSize="30sp"
+        android:inputType="numberDecimal"
+        />
+    <TextView
+        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:text="@string/bs_name_testtime"
+        android:typeface="sans"
+        android:textSize="30sp"
+        android:textStyle="bold"
+
+        />
+    <EditText
+        android:layout_height="50dp"
+        android:layout_width="250dp"
+        android:textSize="30sp"
+        android:id="@+id/TestTimeValue"
+
+        />
+
+</LinearLayout>

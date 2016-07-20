@@ -1,7 +1,5 @@
 package com.hxgy.nurexcute.ui.frg;
 
-import java.util.List;
-
 import android.content.Context;
 
 import com.google.gson.Gson;
@@ -16,6 +14,8 @@ import com.hxgy.nurexcute.dto.AllPatOrdDTO;
 import com.hxgy.nurexcute.dto.RelationOrdDTO;
 import com.hxgy.nurexcute.dto.ResultMessDTO;
 import com.loopj.android.http.AsyncHttpResponseHandler;
+
+import java.util.List;
 
 
 
@@ -146,6 +146,8 @@ public class ExcuteExcuteWorter extends ExcuteExcuteMainA {
 			lv.setAdapter(adapter);
 			if(p.size()>0){
 			 showBtn(this.barcode);
+			}else{
+				UIHelper.ToastMessage(context, "不是该病人的条码或错误的条码!");
 			}
 			}catch (Exception ex) {
 				UIHelper.ToastMessage(context, ex.getMessage());

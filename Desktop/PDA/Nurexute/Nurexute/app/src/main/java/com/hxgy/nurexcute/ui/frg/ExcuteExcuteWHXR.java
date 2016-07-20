@@ -50,7 +50,6 @@ public void init(){
 		String no=strArr[2];
 		main.setSupportProgressBarIndeterminateVisibility(true);
 		ApiClient.RelationOrd(ordId,no,patient.getAdm(),new RelationOrdHander(this.context,barCode));
-
 		// super.showBarData(barCode);
 	}
 	

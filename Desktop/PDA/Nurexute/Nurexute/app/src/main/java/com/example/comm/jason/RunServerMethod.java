@@ -1,19 +1,6 @@
 package com.example.comm.jason;
 
-import java.lang.reflect.Type;
-import java.util.List;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.util.EntityUtils;
-
-import android.os.Handler;
-
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import com.loopj.android.http.AsyncHttpResponseHandler;
-import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
 public class RunServerMethod {
@@ -28,7 +15,7 @@ public class RunServerMethod {
 	
 	RequestParams params= new RequestParams();
 	params.put("isobj", "0");
-	
+
 	
 	params.put("classname", className);
 	params.put("method", methodName);
@@ -60,7 +47,7 @@ public class RunServerMethod {
 		for(int i=0;i<parm;i++){
 			params.put("parm"+(i+1), jasonString[i]);
 		}
-		
+
 		TwitterRestClient.post("", params, responseHandler);
 		
 	}
@@ -78,8 +65,7 @@ public class RunServerMethod {
 	for(int i=0;i<parm;i++){
 		params.put("parm"+(i+1), jasonString[i]);
 	}
-	
-	TwitterRestClient.get("", params, responseHandler);
+		TwitterRestClient.get("", params, responseHandler);
 }
 
 

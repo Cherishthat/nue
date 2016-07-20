@@ -55,7 +55,11 @@ public class ApiClient {
 	public static void GetGetOrd(String admId ,AsyncHttpResponseHandler handler){
 			RunServerMethod.GetRunQuery(handler,"App.Nure.API","GetOrd", admId );
 		}
-	
+	//查出注射用药
+	public static void GetInjectOrd(String admId ,AsyncHttpResponseHandler handler){
+		RunServerMethod.GetRunQuery(handler,"App.Nure.API","GetInjectOrd", admId );
+	}
+
 	//查出病人有几管血
 	public static void GetGetLabNo(String admId ,AsyncHttpResponseHandler handler){
 			RunServerMethod.GetRunQuery(handler,"App.Nure.API","GetLabNo", admId );
@@ -133,7 +137,7 @@ public class ApiClient {
 	}
 	
 	public static void LookUpItem(String code,String group,String admId ,String userId,AsyncHttpResponseHandler handler){
-		RunServerMethod.GetRunQuery(handler,"App.Nure.API","LookUpItem",code,group,admId,userId);
+		RunServerMethod.GetRunQuery(handler,"App.Nure.API","LookUpItem",code,group,admId);
 	}
 	
 	public static void GetArcDetial(String admId,String code,String dep ,AsyncHttpResponseHandler handler){

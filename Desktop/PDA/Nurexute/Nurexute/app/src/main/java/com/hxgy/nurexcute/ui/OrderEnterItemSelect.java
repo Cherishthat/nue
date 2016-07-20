@@ -1,33 +1,27 @@
 package com.hxgy.nurexcute.ui;
 
-import java.util.List;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
+import android.widget.ProgressBar;
 
 import com.actionbarsherlock.app.SherlockActivity;
-import com.actionbarsherlock.view.Menu;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.hxgy.nurexcute.CurUser;
 import com.hxgy.nurexcute.R;
 import com.hxgy.nurexcute.adapter.LookUpItemAdapter;
-import com.hxgy.nurexcute.adapter.OrderEnterSpanAdapter;
 import com.hxgy.nurexcute.api.ApiClient;
 import com.hxgy.nurexcute.common.UIHelper;
 import com.hxgy.nurexcute.dto.ArcItemDTO;
-import com.hxgy.nurexcute.dto.OrdEnterBaseDTO;
 import com.hxgy.nurexcute.dto.PatientDTO;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 
-import android.R.integer;
-import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.AdapterView;
-import android.widget.ListView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ProgressBar;
+import java.util.List;
 
 public class OrderEnterItemSelect extends SherlockActivity {
 	public static final int ARCITEM=1; //医嘱
@@ -70,6 +64,7 @@ public class OrderEnterItemSelect extends SherlockActivity {
 
 		
 		switch (inputType) {
+
 		case ARCITEM:
 			pbar.setVisibility(View.VISIBLE);
 			ApiClient.LookUpItem(inputData, CurUser.userGroupID, patient.getAdm(),CurUser.userId, new LookUpItemHander(this));

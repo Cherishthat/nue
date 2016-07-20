@@ -1,17 +1,12 @@
 package com.smartshell.bluetooth;
 
-import android.app.AlarmManager;
 import android.app.PendingIntent;
-import android.bluetooth.BluetoothAdapter;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.text.TextUtils;
 import android.util.Log;
-
-import com.smartshell.bluetooth.BluetoothConnectService;
-import com.smartshell.bluetooth.BluetoothService;
 
 public class PersistentReceiver extends BroadcastReceiver {
 
@@ -65,7 +60,8 @@ public class PersistentReceiver extends BroadcastReceiver {
 					//String address = "ss";//������ӳɹ��󱣴����ӵ�ַ���´���Ҫ���ӵ�ʱ��ֱ�Ӵ������ַ����
 
 					SharedPreferences sharedata = context.getSharedPreferences("data", 0);  
-					String address = sharedata.getString("btaddress", null);  
+					String address = sharedata.getString("" +
+							"", null);
 					Log.i(TAG,"btaddress="+address);	
 					
 					if(!address.isEmpty())

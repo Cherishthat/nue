@@ -1,7 +1,6 @@
 package com.hxgy.nurexcute;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -11,7 +10,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -43,42 +41,42 @@ import java.util.List;
 public class AppStart extends Activity {
 	public ProgressDialog pBar;
 	final String SAVENAME="nurexcute.apk";
-	final String UPDATE_SERVER="http://172.77.67.23/";
-	private Handler handler = new Handler();
-	Dialog dialog=null;
+	final String UPDATE_SERVER="http://172.22.4.68/";
+	 private Handler handler = new Handler();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         final View view = View.inflate(this, R.layout.start, null);
 		setContentView(view);
-//		update();
-//		checkServierVerson(view);
-		redirectTo();
+		
+
+		//checkServierVerson(view);
+		show(view);
+		
     }
     
     private void doNewVersionUpdate(final View v) {
-
-		dialog=DialogTool.createConfirmDialog(this, "提示", "有新版本是否更新系统!", "更新", "取消", new android.content.DialogInterface.OnClickListener(){
+    	 
+    	DialogTool.createConfirmDialog(this, "提示", "有新版本是否更新系统!", "更新", "取消", new android.content.DialogInterface.OnClickListener(){
 
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
-				  pBar = new ProgressDialog(AppStart.this);
+				  pBar = new ProgressDialog(AppStart.this); 
                   pBar.setTitle("正在下载");
                   pBar.setMessage("请稍候...");
-                  pBar.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                  pBar.setProgressStyle(ProgressDialog.STYLE_SPINNER); 
                   downFile(UPDATE_SERVER+SAVENAME);
 			}
-
+			
 		}, new android.content.DialogInterface.OnClickListener(){
 
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
 				show(v);
 			}
-
-		}, DialogTool.NO_ICON);
-		dialog.show();
+			
+		}, DialogTool.NO_ICON).show();
     }
     
     private void checkServierVerson(View v) {
@@ -100,10 +98,11 @@ public class AppStart extends Activity {
 			VersonDTO o = p.get(0);
 			int serverVerson= Integer.parseInt(o.getVersonCode());
 			int localVerson=getVerCode(context);
-			if(serverVerson>localVerson) {
+			if(serverVerson>localVerson){
 				doNewVersionUpdate(v);
-			}else{
-				redirectTo();
+
+			}else {
+				show(this.v);
 			}
 			 
 			
@@ -151,7 +150,7 @@ public class AppStart extends Activity {
 			public void onAnimationRepeat(Animation animation) {}
 			@Override
 			public void onAnimationStart(Animation animation) {}
-
+			
 		});
 		
     }
@@ -164,17 +163,8 @@ public class AppStart extends Activity {
         startActivity(intent);
         finish();
     }
-
-	@Override
-	protected void onDestroy() {
-//		pBar.dismiss();
-//		 dialog.dismiss();
-		super.onDestroy();
-
-
-	}
-
-	void downFile(final String url) {
+    
+    void downFile(final String url) {
         pBar.show();
         new Thread() {
                 public void run() {
@@ -207,8 +197,7 @@ public class AppStart extends Activity {
                                 if (fileOutputStream != null) {
                                         fileOutputStream.close();
                                 }
-							dialog.dismiss();
-							pBar.dismiss();
+
                                down();
 
                        } catch (ClientProtocolException e) {
@@ -239,15 +228,11 @@ void down() {
 }
 void update() {
 
-	try {
-		Intent intent = new Intent(Intent.ACTION_VIEW);
-		intent.setDataAndType(Uri.fromFile(new File(Environment
-						.getExternalStorageDirectory(), SAVENAME)),
-				"application/vnd.android.package-archive");
-		startActivity(intent);
-	}catch (Exception ex){
-		Log.e("ddddd",ex.getMessage().toString());
-	}
+       Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setDataAndType(Uri.fromFile(new File(Environment
+                        .getExternalStorageDirectory(), SAVENAME)),
+                        "application/vnd.android.package-archive");
+       startActivity(intent);
 } 
     
     

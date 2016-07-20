@@ -1,7 +1,5 @@
 package com.hxgy.nurexcute.ui.frg;
 
-import java.util.List;
-
 import android.content.Context;
 
 import com.google.gson.Gson;
@@ -16,6 +14,8 @@ import com.hxgy.nurexcute.dto.PhaOrdDTO;
 import com.hxgy.nurexcute.dto.RelationOrdDTO;
 import com.hxgy.nurexcute.dto.ResultMessDTO;
 import com.loopj.android.http.AsyncHttpResponseHandler;
+
+import java.util.List;
 
 
 
