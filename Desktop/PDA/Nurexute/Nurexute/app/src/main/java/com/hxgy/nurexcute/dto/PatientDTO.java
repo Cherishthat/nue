@@ -27,6 +27,9 @@ public class PatientDTO implements Serializable{
 	public String getImgname() {
 		return imgname;
 	}
+	public String getctlocDesc() {
+		return ctlocDesc;
+	}
 	public void setImgname(String imgname) {
 		this.imgname = imgname;
 	}

@@ -71,8 +71,8 @@ private void init(){
 	 tvName = (TextView) getActivity().findViewById(R.id.orderenter_main_tvname);
 	 tvPatNo = (TextView) getActivity().findViewById(R.id.orderenter_main_tvpatno);
 	 txtBedNo = (TextView) getActivity().findViewById(R.id.orderenter_main_tvbed);
-	addButton=(Button) getActivity().findViewById(R.id.orderenter_btnadd) ;
-	addButton.setOnClickListener(new OnClickListener() {
+	 addButton=(Button) getActivity().findViewById(R.id.orderenter_btnadd) ;
+	 addButton.setOnClickListener(new OnClickListener() {
 		@Override
 		public void onClick(View v) {
 			UIHelper.showOrderEnterInput(getActivity(), 200,patient,null);

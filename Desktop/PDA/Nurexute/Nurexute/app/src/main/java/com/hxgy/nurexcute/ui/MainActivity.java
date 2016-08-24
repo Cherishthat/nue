@@ -96,6 +96,7 @@ public class MainActivity extends BaseActivity  {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
 		//tmType=(TelephonyManager)this.getSystemService(Context.TELEPHONY_SERVICE);
 		getSlidingMenu().setTouchModeAbove(SlidingMenu.TOUCHMODE_NONE);
 		if (savedInstanceState != null)
@@ -122,8 +123,6 @@ public class MainActivity extends BaseActivity  {
 			@Override
 			public void onResult(String data) {
 				// TODO Auto-generated method stub
-
-
 				if (data != null && !data.isEmpty()) {
 					toBarCode(data,MainActivity.this);
 				}
@@ -177,6 +176,10 @@ public class MainActivity extends BaseActivity  {
 		getSupportMenuInflater().inflate(R.menu.main, menu);
 		MenuItem actionExcute = menu.findItem(R.id.menu_excute_btn);
 		MenuItem actionSearch=menu.findItem(R.id.menu_search_btn);
+		//显示护士信息
+		MenuItem showNurseDetail=menu.findItem(R.id.menu_NurseDetail_show);
+		showNurseDetail.setTitle(CurUser.userName);
+		showNurseDetail.setVisible(true);
 //		MenuItem actionChart=menu.findItem(R.id.menu_chart_btn);
 		if(this.mContent instanceof ExcuteMain){
 			actionExcute.setVisible(true);
@@ -312,12 +315,12 @@ public class MainActivity extends BaseActivity  {
 				break;
 			case MenuRighBar.INJECT:
 				mContent = new ExcuteExcuteINJECT();
-				args.putSerializable("grpCode", "4");
+				//args.putSerializable("grpCode", "4");
 				mContent.setArguments(args);
 				break;
 			case MenuRighBar.BLOODSUGAR:
 				mContent=new BloodSugar();
-				args.putSerializable("greCode","5");
+				//args.putSerializable("greCode","0");
 				mContent.setArguments(args);
 				break;
 			case MenuRighBar.LABNO:
@@ -695,7 +698,6 @@ public class MainActivity extends BaseActivity  {
 			if (!mKeyguardManager.inKeyguardRestrictedInputMode()) {
 				if (ACTION_BROADCASTRECEIVER.equals(action)){
 					barCode=intent.getStringExtra("smartshell_data");
-
 					showExcute=false;
 					if(!barCode.equals("")){
 						barCode=barCode.split(":")[1];
@@ -740,6 +742,9 @@ public class MainActivity extends BaseActivity  {
 			case MenuRighBar.WORTER :
 //				   ((IBarInterface)mContent).excuteWorter(barCode);
 				excuteContent=(ExcuteExcuteWorter)mContent;
+				break;
+			case MenuRighBar.INJECT:
+				excuteContent=(ExcuteExcuteINJECT)mContent;
 				break;
 			case MenuRighBar.PHA :
 				excuteContent=(ExcuteExcutePHA)mContent;

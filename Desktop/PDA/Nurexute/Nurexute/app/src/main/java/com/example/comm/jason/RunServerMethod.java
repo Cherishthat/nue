@@ -67,7 +67,4 @@ public class RunServerMethod {
 	}
 		TwitterRestClient.get("", params, responseHandler);
 }
-
-
-
 }

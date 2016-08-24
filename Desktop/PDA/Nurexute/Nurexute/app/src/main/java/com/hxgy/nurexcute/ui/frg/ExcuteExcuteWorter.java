@@ -1,6 +1,8 @@
 package com.hxgy.nurexcute.ui.frg;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.media.MediaPlayer;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -9,6 +11,7 @@ import com.hxgy.nurexcute.R;
 import com.hxgy.nurexcute.adapter.ExcuteExcuteGetOrdAdapter;
 import com.hxgy.nurexcute.adapter.ExcuteExcuteRelationOrdAdapter;
 import com.hxgy.nurexcute.api.ApiClient;
+import com.hxgy.nurexcute.common.DialogTool;
 import com.hxgy.nurexcute.common.UIHelper;
 import com.hxgy.nurexcute.dto.AllPatOrdDTO;
 import com.hxgy.nurexcute.dto.RelationOrdDTO;
@@ -20,7 +23,6 @@ import java.util.List;
 
 
 public class ExcuteExcuteWorter extends ExcuteExcuteMainA {
-
 	@Override
 	public void init(){
 		getActivity().setTitle(R.string.menu_right_bar_worter);
@@ -147,7 +149,8 @@ public class ExcuteExcuteWorter extends ExcuteExcuteMainA {
 			if(p.size()>0){
 			 showBtn(this.barcode);
 			}else{
-				UIHelper.ToastMessage(context, "不是该病人的条码或错误的条码!");
+                PatientBarErr();
+
 			}
 			}catch (Exception ex) {
 				UIHelper.ToastMessage(context, ex.getMessage());
@@ -167,5 +170,28 @@ public class ExcuteExcuteWorter extends ExcuteExcuteMainA {
 			}
 		}
 	}
+    private void PatientBarErr() {
+        final MediaPlayer mpp;
+        mpp=MediaPlayer.create(context,R.raw.beep);
+        mpp.setLooping(true);
+        mpp.start();
+        DialogTool.createConfirmDialog(context, "警告", "不是该病人的条码或错误的条码!", "确定", "取消", new android.content.DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+               //UIHelper.ToastMessage(context, "不是该病人的条码或错误的条码!");
+                mpp.setLooping(false);
+                mpp.release();
+            }
+
+        }, new android.content.DialogInterface.OnClickListener(){
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                mpp.setLooping(false);
+                mpp.release();
+            }
+
+        }, DialogTool.NO_ICON).show();
+    }
 
 }

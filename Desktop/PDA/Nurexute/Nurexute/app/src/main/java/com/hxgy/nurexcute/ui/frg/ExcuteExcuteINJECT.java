@@ -109,6 +109,7 @@ public class ExcuteExcuteINJECT extends ExcuteExcuteMainA {
                 }else{
                     UIHelper.ToastMessage(context, R.string.WaitExcuteList_failure);
                     UIHelper.ToastMessage(context, p.get(0).getMessage());
+
                 }
             }catch (Exception ex) {
                 UIHelper.ToastMessage(context, ex.getMessage());

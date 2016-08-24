@@ -1,5 +1,30 @@
 package com.hxgy.nurexcute.ui.frg;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.List;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.hxgy.nurexcute.App;
+import com.hxgy.nurexcute.CurUser;
+import com.hxgy.nurexcute.R;
+import com.hxgy.nurexcute.api.ApiClient;
+import com.hxgy.nurexcute.common.DialogTool;
+import com.hxgy.nurexcute.common.UIHelper;
+import com.hxgy.nurexcute.dto.OBSItemDTO;
+import com.hxgy.nurexcute.dto.OBSItemLineDTO;
+import com.hxgy.nurexcute.dto.PatientDTO;
+import com.hxgy.nurexcute.dto.UserResultMess;
+import com.hxgy.nurexcute.ui.SignsChart;
+import com.hxgy.nurexcute.ui.ExcuteContent;
+import com.hxgy.nurexcute.ui.MainActivity;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+
 import android.app.DatePickerDialog;
 import android.app.DatePickerDialog.OnDateSetListener;
 import android.content.Context;
@@ -25,30 +50,6 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import com.hxgy.nurexcute.CurUser;
-import com.hxgy.nurexcute.R;
-import com.hxgy.nurexcute.api.ApiClient;
-import com.hxgy.nurexcute.common.DialogTool;
-import com.hxgy.nurexcute.common.UIHelper;
-import com.hxgy.nurexcute.dto.OBSItemDTO;
-import com.hxgy.nurexcute.dto.OBSItemLineDTO;
-import com.hxgy.nurexcute.dto.PatientDTO;
-import com.hxgy.nurexcute.dto.UserResultMess;
-import com.hxgy.nurexcute.ui.ExcuteContent;
-import com.hxgy.nurexcute.ui.MainActivity;
-import com.hxgy.nurexcute.ui.SignsChart;
-import com.loopj.android.http.AsyncHttpResponseHandler;
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.List;
-
 public class SignsMain extends Fragment implements ExcuteContent{
 	private Context context;
 	private PatientDTO patient;
@@ -63,7 +64,6 @@ public class SignsMain extends Fragment implements ExcuteContent{
 	private EditText tvTime;
 	private MainActivity main ;
 	private Calendar cal = Calendar.getInstance();
-	private String UMMeasurReasonID;
 	
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		return inflater.inflate(R.layout.signs_main, null);
@@ -96,12 +96,12 @@ public class SignsMain extends Fragment implements ExcuteContent{
 		ckDate=(CheckBox) getActivity().findViewById(R.id.signs_mian_ckdate);
 		sptime=(Spinner) getActivity().findViewById(R.id.signs_mian_sptime);
 		tvTime=(EditText) getActivity().findViewById(R.id.signs_mian_tvtime);
-
 		ckDate.setOnCheckedChangeListener(new CheckDateClick());
-
+		
+		
 		ArrayAdapter<CharSequence> sptimeadapter = ArrayAdapter.createFromResource( getActivity(), R.array.obstime, android.R.layout.simple_spinner_item);
 		sptime.setAdapter(sptimeadapter);
-		sptimeadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		sptimeadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); 
 		Date currDate=new Date();
 		int position=sptimeadapter.getCount()-1;
 		for (int i=0;i<sptimeadapter.getCount();i++) {
@@ -144,7 +144,6 @@ public class SignsMain extends Fragment implements ExcuteContent{
 		public void onCheckedChanged(CompoundButton buttonView,
 				boolean isChecked) {
 			if(isChecked){
-
 				sptime.setVisibility(View.VISIBLE);
 				tvTime.setVisibility(View.GONE);
 				
@@ -222,27 +221,18 @@ private void saveDate(){
 		UIHelper.ToastMessage(context, R.string.signs_main_chesemess);
 		return ;
 	}
+	
+	
 	main.setSupportProgressBarIndeterminateVisibility(true);
 	List<OBSItemDTO> list=new ArrayList<OBSItemDTO>();
 	LinearLayout row;
 	EditText value;
-	Spinner lspinner;
-	TextView tv;
 	for (int i=0;i<root.getChildCount();i++){
 		 row=(LinearLayout) root.getChildAt(i);
-		 tv=(TextView) row.getChildAt(0);
+		 value =(EditText) row.getChildAt(1);
 		 OBSItemDTO o = new OBSItemDTO();
-		 if(tv.getText().toString().equals("体温未测原因")){
-
-			 lspinner=(Spinner) row.getChildAt(1);
-			 o.setId(lspinner.getTag().toString());
-			 o.setValue(lspinner.getSelectedItem().toString());
-//			 Toast.makeText(getActivity(), lspinner.getSelectedItem().toString(),Toast.LENGTH_LONG).show();
-		 }else{
-			 value =(EditText) row.getChildAt(1);
-			 o.setId(value.getTag().toString());
-			 o.setValue(value.getText().toString());
-		 }
+		 o.setId(value.getTag().toString());
+		 o.setValue(value.getText().toString());
 		 list.add(o);
 	}
 	Gson gson = new Gson();
@@ -253,7 +243,7 @@ private void saveDate(){
 }
 
 private void initUI(){
-
+	
 	
 	String searchDate=tvdate.getText().toString();
 	String searchTime="";
@@ -274,8 +264,6 @@ private void initUI(){
 }
 	@SuppressWarnings("ResourceType")
 private void createUI(List<OBSItemDTO> list){
-
-
 	LinearLayout.LayoutParams parm = new LinearLayout.LayoutParams (ViewGroup.LayoutParams.MATCH_PARENT ,ViewGroup.LayoutParams.WRAP_CONTENT);
 	LinearLayout.LayoutParams itmparm = new LinearLayout.LayoutParams (0 ,ViewGroup.LayoutParams.WRAP_CONTENT,1.0f);
 	LinearLayout.LayoutParams tvparm = new LinearLayout.LayoutParams (0 ,ViewGroup.LayoutParams.WRAP_CONTENT,2.0f);
@@ -290,58 +278,22 @@ private void createUI(List<OBSItemDTO> list){
 		if(patient!=null){
 		  tv.setOnClickListener(new ItemClick(obsItemDTO,patient.getAdm()));
 		}
-
 		tv.setText(obsItemDTO.getDesc());
 		tv.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG);//下划线
 		tv.setTextColor(Color.BLACK);
 		tv.setLayoutParams(tvparm);
-		row.addView(tv);
-		if(tv.getText().toString().equals("体温未测原因")){
-			Spinner sn=new Spinner(this.context);
-			UMMeasurReasonID=obsItemDTO.getId();
-			sn.setTag(obsItemDTO.getId());
-			sn.setLayoutParams(tvparm);
-			String strModel_init=",外出,拒测,手术,其他";
-			String[] arrModel =strModel_init.split(",");
-			ArrayAdapter<String> adapter;
-			adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item,arrModel);
-			adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-			sn.setAdapter(adapter);
-			int tlistPosition=0;
-			if(obsItemDTO.getValue()!=""){
-				String ListMeasurValue=obsItemDTO.getValue();
-
-				if(ListMeasurValue.equals("外出")){
-					tlistPosition=1;
-				};
-				if(ListMeasurValue.equals("拒测")){
-					tlistPosition=2;
-				};
-				if(ListMeasurValue.equals("手术")){
-					tlistPosition=3;
-				};
-				if(ListMeasurValue.equals("其他")){
-					tlistPosition=4;
-				};
-			}
-			sn.setSelection(tlistPosition);
-			sn.setVisibility(View.VISIBLE);
-			row.addView(sn);
-		}else{
-			EditText value = new EditText(this.context);
-			value.setTag(obsItemDTO.getId());
-			value.setInputType(InputType.TYPE_CLASS_PHONE);
-			value.setTextAppearance(context, android.R.attr.textAppearanceLargeInverse);
-			value.setText(obsItemDTO.getValue());
-			value.setLayoutParams(tvparm);
-			row.addView(value);
-		}
+		EditText value = new EditText(this.context);
+		value.setTag(obsItemDTO.getId());
+		value.setInputType(InputType.TYPE_CLASS_PHONE);
+		value.setTextAppearance(context, android.R.attr.textAppearanceLargeInverse);
+		value.setText(obsItemDTO.getValue());
+		value.setLayoutParams(tvparm);
 		TextView uom = new TextView(this.context);
 		uom.setText(obsItemDTO.getUom());
 		uom.setTextColor(Color.BLACK);
 		uom.setLayoutParams(itmparm);
-
-
+		row.addView(tv);
+		row.addView(value);
 		row.addView(uom);
 		root.addView(row);
 	}
@@ -429,6 +381,7 @@ class ShowObsLineHander extends AsyncHttpResponseHandler{
 				xdate.get(0)[i]= dateConvert.parse(list.get(i).getDate());
 				values.get(0)[i]=Double.parseDouble(list.get(i).getData());
 			} catch (ParseException e) {
+				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			
@@ -436,6 +389,7 @@ class ShowObsLineHander extends AsyncHttpResponseHandler{
 		chart.setXdate(xdate);
 		chart.setValues(values);
 		chart.setTitle(this.obsItem.getDesc());
+      
 		Intent inter = chart.execute(this.context);
 		startActivity(inter);
 		}catch (Exception ex) {

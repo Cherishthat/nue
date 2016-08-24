@@ -41,17 +41,16 @@ import java.util.List;
 public class AppStart extends Activity {
 	public ProgressDialog pBar;
 	final String SAVENAME="nurexcute.apk";
-	final String UPDATE_SERVER="http://172.22.4.68/";
-	 private Handler handler = new Handler();
+//	final String UPDATE_SERVER="http://172.22.4.68/";
+	final String UPDATE_SERVER="http://192.168.23.1:8080/myapp/";
+	private Handler handler = new Handler();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         final View view = View.inflate(this, R.layout.start, null);
 		setContentView(view);
-		
-
-		//checkServierVerson(view);
+		checkServierVerson(view);
 		show(view);
 		
     }
@@ -62,6 +61,7 @@ public class AppStart extends Activity {
 
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
+
 				  pBar = new ProgressDialog(AppStart.this); 
                   pBar.setTitle("正在下载");
                   pBar.setMessage("请稍候...");
@@ -80,6 +80,7 @@ public class AppStart extends Activity {
     }
     
     private void checkServierVerson(View v) {
+//		doNewVersionUpdate(v);
     	ApiClient.getServerVerCode(new ServierVersonHandle(this,v));
     }
     class ServierVersonHandle extends AsyncHttpResponseHandler {
@@ -92,8 +93,7 @@ public class AppStart extends Activity {
 		@Override
 		public void onSuccess(String result) {
 			super.onSuccess(result);
-			try {
-			Gson gson = new Gson();
+			try {Gson gson = new Gson();
 			List<VersonDTO> p = gson.fromJson(result,new TypeToken<List<VersonDTO>>(){}.getType() );
 			VersonDTO o = p.get(0);
 			int serverVerson= Integer.parseInt(o.getVersonCode());
@@ -165,7 +165,7 @@ public class AppStart extends Activity {
     }
     
     void downFile(final String url) {
-        pBar.show();
+//        pBar.show();
         new Thread() {
                 public void run() {
                         HttpClient client = new DefaultHttpClient();

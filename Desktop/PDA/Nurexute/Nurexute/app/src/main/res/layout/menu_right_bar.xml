@@ -171,7 +171,6 @@
          android:id="@+id/menu_right_bar_injectDrug"
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
-         android:visibility="gone"
          android:orientation="horizontal" >
 
          <ImageView
@@ -211,7 +210,6 @@
         android:id="@+id/menu_right_bar_labno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         android:orientation="horizontal" >
 
         <ImageView
@@ -232,7 +230,6 @@
         android:id="@+id/menu_right_bar_pha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         android:orientation="horizontal" >
 
         <ImageView
@@ -253,7 +250,6 @@
         android:id="@+id/menu_right_bar_whxr"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         android:orientation="horizontal" >
 
         <ImageView
@@ -314,7 +310,6 @@
         android:id="@+id/menu_right_bar_wordMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         android:orientation="horizontal" >
 
         <ImageView

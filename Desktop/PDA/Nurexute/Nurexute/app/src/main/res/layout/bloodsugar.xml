@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:background="@drawable/blood"
     android:layout_height="match_parent">
+
     <CheckBox
         android:layout_gravity="center"
         android:layout_height="50dp"
@@ -11,6 +12,7 @@
         android:text="@string/bs_name_fasting"
         android:textStyle="bold"
         android:textSize="25sp"
+        android:id="@+id/fasting"
         />
     <TextView
         android:layout_gravity="center"
@@ -18,7 +20,7 @@
         android:layout_height="50dp"
         android:text="@string/bs_name_testproject"
         android:typeface="monospace"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         />
     <Spinner
@@ -32,14 +34,15 @@
         android:layout_width="wrap_content"
         android:text="@string/bs_name_result"
         android:textStyle="bold"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:typeface="sans"
+
         />
     <EditText
         android:layout_height="50dp"
         android:layout_width="250dp"
         android:id="@+id/ResultValue"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:inputType="numberDecimal"
         />
     <TextView
@@ -47,16 +50,24 @@
         android:layout_width="wrap_content"
         android:text="@string/bs_name_testtime"
         android:typeface="sans"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textStyle="bold"
 
         />
     <EditText
         android:layout_height="50dp"
         android:layout_width="250dp"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:id="@+id/TestTimeValue"
 
+        />
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="保存"
+        android:id="@+id/BloodSave"
+        android:textSize="20sp"
+        android:typeface="serif"
         />
 
 </LinearLayout>

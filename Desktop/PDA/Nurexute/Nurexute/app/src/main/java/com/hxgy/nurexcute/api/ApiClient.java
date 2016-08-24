@@ -171,5 +171,10 @@ public class ApiClient {
 	public static void SetSkinTest(String orderId,String userId,String flag,AsyncHttpResponseHandler handler){
 		RunServerMethod.Get(handler,"App.Nure.API","SetSkinTest",orderId,userId,flag);
 	}
-	
+	public static void SaveBloodSugar(String Values,AsyncHttpResponseHandler handler){
+		RunServerMethod.Get(handler,"App.Nure.API","SaveBloodSugar",Values);
+	}
+	public static void GetBloodListValue(String Values,AsyncHttpResponseHandler handler){
+		RunServerMethod.Get(handler,"App.Nure.API","GetBloodListValue",Values);
+	}
 }
